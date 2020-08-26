@@ -42,13 +42,13 @@ cp -r /tmp/$TOMCAT7_CORE_UNPACKED_DIRNAME/* $CATALINA_HOME
 { which java; } || { yum install -y java; }
 
 # Create the service init.d script
-cat > /etc/init.d/tomcat7 <<'EOF'
+cat > /etc/init.d/tomcat9 <<'EOF'
 #!/bin/bash
 # description: Tomcat7 Start Stop Restart
 # processname: tomcat7
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
-CATALINA_HOME='/usr/share/tomcat7-codedeploy'
+CATALINA_HOME='/usr/share/tomcat9-codedeploy'
 
 case $1 in
 start)
@@ -66,4 +66,4 @@ exit 0
 EOF
 
 # Change permission mode for the service script
-chmod 755 /etc/init.d/tomcat7
+chmod 755 /etc/init.d/tomcat9
