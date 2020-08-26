@@ -15,7 +15,7 @@ TOMCAT7_CORE_UNPACKED_DIRNAME="apache-tomcat-$TOMCAT_VERSION"
 
 # Check whether there exists a valid instance
 # of Tomcat7 installed at the specified directory
-[[ -d $CATALINA_HOME ]] && { service tomcat7 status; } && {
+[[ -d $CATALINA_HOME ]] && { service tomcat9 status; } && {
     echo "Tomcat7 is already installed at $CATALINA_HOME. Skip reinstalling it."
     exit 0
 }
